@@ -1,19 +1,414 @@
 <!DOCTYPE html>
+
 <html lang="zh-CN">
 <head>
-    <meta charset="UTF-8">
-    <title>X-MuAn 的个人主页</title>
-    <style>
-        body {
-            text-align: center;
-            margin-top: 100px;
-            font-family: Microsoft Yahei;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>送给廖菲的小惊喜 ❤️</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:"Microsoft YaHei",sans-serif;
+}
+
+body{
+overflow:hidden;
+background:#000;
+color:white;
+height:100vh;
+}
+
+#stars{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+z-index:-2;
+background:linear-gradient(to bottom,#020111 0%,#191621 100%);
+}
+
+.star{
+position:absolute;
+background:white;
+border-radius:50%;
+animation:twinkle 2s infinite alternate;
+}
+
+@keyframes twinkle{
+from{opacity:0.2;}
+to{opacity:1;}
+}
+
+.shooting-star{
+position:absolute;
+width:120px;
+height:2px;
+background:linear-gradient(to right,white,transparent);
+transform:rotate(-35deg);
+animation:shoot 4s linear infinite;
+}
+
+@keyframes shoot{
+0%{
+transform:translateX(-200px) translateY(0) rotate(-35deg);
+opacity:1;
+}
+100%{
+transform:translateX(1500px) translateY(400px) rotate(-35deg);
+opacity:0;
+}
+}
+
+.container{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+width:90%;
+max-width:800px;
+text-align:center;
+z-index:10;
+}
+
+.hidden{
+display:none;
+}
+
+h1{
+font-size:3rem;
+margin-bottom:20px;
+text-shadow:0 0 20px #fff;
+}
+
+.content{
+font-size:1.25rem;
+line-height:2;
+opacity:0;
+animation:fadeIn 2s forwards;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(30px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+.btn{
+margin-top:40px;
+padding:15px 35px;
+font-size:1.2rem;
+border:none;
+border-radius:50px;
+cursor:pointer;
+background:#ff4d88;
+color:white;
+transition:0.3s;
+box-shadow:0 0 20px #ff4d88;
+}
+
+.btn:hover{
+transform:scale(1.08);
+}
+
+.heart{
+position:fixed;
+font-size:22px;
+color:#ff4d88;
+animation:fall linear forwards;
+pointer-events:none;
+}
+
+@keyframes fall{
+0%{
+transform:translateY(-20px);
+opacity:1;
+}
+100%{
+transform:translateY(110vh);
+opacity:0;
+}
+}
+
+#loading{
+position:absolute;
+top:50%;
+left:50%;
+transform:translate(-50%,-50%);
+text-align:center;
+}
+
+.loader{
+margin-top:20px;
+width:220px;
+height:6px;
+background:#333;
+border-radius:20px;
+overflow:hidden;
+}
+
+.loader span{
+display:block;
+height:100%;
+width:0;
+background:#ff4d88;
+animation:load 3s linear forwards;
+}
+
+@keyframes load{
+to{
+width:100%;
+}
+}
+
+#gift{
+font-size:1.6rem;
+line-height:2;
+animation:fadeIn 2s forwards;
+}
+
+.firework{
+position:fixed;
+font-size:22px;
+pointer-events:none;
+animation:explode 1.5s ease-out forwards;
+}
+
+@keyframes explode{
+0%{
+opacity:1;
+transform:scale(0);
+}
+100%{
+opacity:0;
+transform:scale(4);
+}
+}
+
+@media(max-width:768px){
+h1{
+font-size:2rem;
+}
+.content{
+font-size:1rem;
+}
+}
+</style>
+
 </head>
+
 <body>
-    <h1>欢迎来到我的个人网站</h1>
-    <p>网址：https://X-MuAn.github.io</p>
-    <p>这里可以放你的自我介绍、简历、作品</p>
+
+<div id="stars"></div>
+
+<!-- 音乐 -->
+
+<audio id="bgm" autoplay loop>
+<source src="你的音乐链接.mp3" type="audio/mpeg">
+</audio>
+
+<!-- 加载页 -->
+
+<div id="loading">
+<h1>✨ 神秘信息解析中 ✨</h1>
+<p style="margin-top:20px;">检测到一位特别的人...</p>
+<div class="loader">
+<span></span>
+</div>
+</div>
+
+<!-- 主页面 -->
+
+<div class="container hidden" id="main">
+
+<h1>廖菲 ❤️</h1>
+
+<div class="content">
+<p>亲爱的廖菲：</p>
+
+<p>
+谢谢你出现在我的生活里。
+</p>
+
+<p>
+以前觉得日子只是一天接着一天，
+遇见你以后，
+每一天都开始变得值得期待。
+</p>
+
+<p>
+谢谢你的陪伴，
+谢谢你的包容，
+谢谢你愿意听我说那些琐碎的小事。
+</p>
+
+<p>
+原来最幸福的事情，
+不是轰轰烈烈，
+而是身边一直有你。
+</p>
+
+<p>
+未来还有很多地方要一起去，
+很多风景要一起看，
+很多故事要一起写。
+</p>
+
+<p>
+希望以后每一个重要时刻，
+你的身边都有我。
+</p>
+
+<p style="margin-top:30px;font-size:1.6rem;">
+向志洁 ❤️ 廖菲
+</p>
+
+<button class="btn" onclick="showGift()">
+🎁 点击领取你的专属礼物
+</button>
+
+</div>
+
+</div>
+
+<!-- 礼物 -->
+
+<div class="container hidden" id="gift">
+<h1>🎁</h1>
+
+<p>
+礼物其实就是：
+</p>
+
+<p>
+以后所有的偏爱，
+所有的温柔，
+所有的重要时刻，
+</p>
+
+<p>
+都优先给你。
+</p>
+
+<h1 style="margin-top:30px;">
+❤️
+</h1>
+</div>
+
+<script>
+
+// 星空
+const stars=document.getElementById('stars');
+
+for(let i=0;i<250;i++){
+let star=document.createElement('div');
+star.className='star';
+
+let size=Math.random()*3;
+
+star.style.width=size+'px';
+star.style.height=size+'px';
+star.style.left=Math.random()*100+'%';
+star.style.top=Math.random()*100+'%';
+
+star.style.animationDuration=
+Math.random()*3+1+'s';
+
+stars.appendChild(star);
+}
+
+// 流星
+setInterval(()=>{
+let s=document.createElement('div');
+s.className='shooting-star';
+
+s.style.top=Math.random()*300+'px';
+s.style.left='-150px';
+
+document.body.appendChild(s);
+
+setTimeout(()=>{
+s.remove();
+},4000);
+
+},2500);
+
+// 爱心雨
+function createHeart(){
+
+let heart=document.createElement('div');
+heart.className='heart';
+
+heart.innerHTML='❤';
+
+heart.style.left=Math.random()*100+'vw';
+
+heart.style.animationDuration=
+Math.random()*3+4+'s';
+
+document.body.appendChild(heart);
+
+setTimeout(()=>{
+heart.remove();
+},7000);
+
+}
+
+setInterval(createHeart,300);
+
+// 加载完成
+setTimeout(()=>{
+document.getElementById("loading").style.display="none";
+document.getElementById("main").classList.remove("hidden");
+},3200);
+
+// 礼物
+function showGift(){
+
+document.getElementById("main")
+.classList.add("hidden");
+
+document.getElementById("gift")
+.classList.remove("hidden");
+
+fireworks();
+
+}
+
+// 烟花
+function fireworks(){
+
+for(let i=0;i<120;i++){
+
+let fw=document.createElement('div');
+
+fw.className='firework';
+
+fw.innerHTML=
+['✨','🎆','💖','⭐','💗'][Math.floor(Math.random()*5)];
+
+fw.style.left=Math.random()*100+'vw';
+fw.style.top=Math.random()*100+'vh';
+
+document.body.appendChild(fw);
+
+setTimeout(()=>{
+fw.remove();
+},1500);
+
+}
+
+}
+
+</script>
+
 </body>
 </html>
